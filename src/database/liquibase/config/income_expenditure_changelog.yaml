@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - includeAll:
+      path: "../scripts/income_expenditure"
+      relativeToChangelogFile: true
