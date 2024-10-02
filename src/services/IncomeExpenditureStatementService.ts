@@ -96,14 +96,9 @@ export class IEStatementService {
       relations: ["transactionEntries"]
     });
 
-    console.log({ statement });
-
-    // Check if the statement exists
     if (!statement) {
       throw new BadRequest("Statement not found.");
     }
-
-    // Create an instance of GetStatementResponse
     const response = new GetStatementResponse();
     response.statementId = statement.statementId;
     response.totalIncome = statement.totalIncome;
