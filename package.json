@@ -14,7 +14,8 @@
     "test:lint": "eslint '**/*.{ts,js}'",
     "test:lint:fix": "eslint '**/*.{ts,js}' --fix",
     "prettier": "prettier '**/*.{ts,js,json,md,yml,yaml}' --write",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "liquibase:update": "liquibase update"
   },
   "dependencies": {
     "@tsed/ajv": "^7.83.3",
@@ -49,7 +50,9 @@
     "dotenv-flow": "^4.1.0",
     "express": "^4.21.0",
     "method-override": "^3.0.0",
-    "pg": "^8.13.0"
+    "pg": "^8.13.0",
+    "pino": "^9.4.0",
+    "pino-http": "^10.3.0"
   },
   "devDependencies": {
     "@tsed/cli-plugin-eslint": "5.4.3",
