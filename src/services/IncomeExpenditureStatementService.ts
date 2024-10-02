@@ -96,26 +96,29 @@ export class IEStatementService {
       relations: ["transactionEntries"]
     });
 
+    console.log({ statement });
+
+    // Check if the statement exists
     if (!statement) {
       throw new BadRequest("Statement not found.");
     }
 
-    const response: GetStatementResponse = {
-      statementId: statement.statementId,
-      totalIncome: statement.totalIncome,
-      totalExpenditure: statement.totalExpenditure,
-      disposableIncome: statement.disposableIncome,
-      rating: statement.rating,
-      createdAt: statement.createdAt,
-      updatedAt: statement.updatedAt,
-      transactionEntries: statement.transactionEntries.map((entry) => ({
-        id: entry.transactionId,
-        description: entry.description,
-        amount: entry.amount,
-        type: entry.type,
-        date: entry.date
-      }))
-    };
+    // Create an instance of GetStatementResponse
+    const response = new GetStatementResponse();
+    response.statementId = statement.statementId;
+    response.totalIncome = statement.totalIncome;
+    response.totalExpenditure = statement.totalExpenditure;
+    response.disposableIncome = statement.disposableIncome;
+    response.rating = statement.rating;
+    response.createdAt = statement.createdAt;
+    response.updatedAt = statement.updatedAt;
+    response.transactionEntries = statement.transactionEntries.map((entry) => ({
+      id: entry.transactionId,
+      description: entry.description,
+      amount: entry.amount,
+      type: entry.type,
+      date: entry.date
+    }));
 
     return {
       status: ResponseStatus.Success,
@@ -123,6 +126,7 @@ export class IEStatementService {
       message: "Statement was successfully retrieved"
     };
   }
+
   /**
    * Helper method to determine the I&E rating based on the expenditure-to-income ratio.
    * @param ratio - The expenditure-to-income ratio.
