@@ -1,3 +1,6 @@
+<p style="text-align: center" align="center">
+  <a href="https://tsed.io" target="_blank"><img src="https://tsed.io/tsed-og.png" width="200" alt="Ts.ED logo"/></a>
+</p>
 
 <div align="center">
   <h1>Ts.ED - income-expenditure-api</h1>
