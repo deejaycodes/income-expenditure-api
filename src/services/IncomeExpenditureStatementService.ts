@@ -61,8 +61,6 @@ export class IEStatementService {
       order: { createdAt: "DESC" }
     });
 
-    console.log(statements);
-
     const statementsResponse: GetStatementResponse[] = statements.map((statement) => ({
       statementId: statement.statementId,
       totalIncome: statement.totalIncome,
