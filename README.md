@@ -1,8 +1,9 @@
-```markdown
+```
 # INCOME AND EXPEDITURE API
 
-The Income and Expenditure API is designed to help users manage their financial statements. This API allows for the creation, retrieval, and management of income and expenditure statements for authenticated users. It is built using **TypeScript** and the **Ts.ED** framework, with **PostgreSQL** as the backend database.
-e and Expenditure API
+The Income and Expenditure API is designed to help users manage their financial statements.
+This API allows for the creation, retrieval, and management of income and expenditure statements for authenticated users.
+It is built using TypeScript and the Ts.ED framework, with PostgreSQL as the backend database.
 ```
 
 # Overview
